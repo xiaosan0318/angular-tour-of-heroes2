@@ -1,4 +1,5 @@
 import { Component, Input,OnInit } from '@angular/core';
+//ActivatedRoute为每个路由组件提供提供的一个服务，它包含特定于路由的信息，比如路由参数、静态数据、解析数据、全局查询参数和全局碎片（fragment）。
 import { ActivatedRoute, Params} from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';

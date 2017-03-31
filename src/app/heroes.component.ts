@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero} from './hero';
 import { HeroService } from './hero.service';
+//为激活的URL显示应用组件。管理从一个组件到另一个组件的导航
 import { Router } from '@angular/router';
 
 @Component({
