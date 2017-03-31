@@ -7,6 +7,9 @@
 # dependencies
 /node_modules
 
+#debugger for chrome
+/out
+
 # IDEs and editors
 /.idea
 .project

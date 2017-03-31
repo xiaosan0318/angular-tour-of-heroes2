@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-
+//该指令（<router-outlet>）用来标记出路由器该在哪里显示视图。 
 @Component({
     moduleId: module.id,
     selector: 'app-root',

@@ -28,6 +28,20 @@ export class HeroesComponent implements OnInit {
     console.log(2);
   }
 
+  add(name: string): void{
+    name = name.trim();
+    if(!name) return;
+    this.heroService.create(name).then(hero=> this.heroes.push(hero));
+  }
+
+  delete(hero:Hero): void{
+    this.heroService.delete(hero)
+    .then(()=>{
+      this.heroes = this.heroes.filter(h=> h !== hero)
+      if(this.selectedHero === hero) this.selectedHero = null;
+    });
+  }
+
 
 
   selectedHero : Hero;
@@ -36,6 +50,7 @@ export class HeroesComponent implements OnInit {
      this.selectedHero = hero;
   }
 
+//命令式的导航
   gotoDetail(){
     this.router.navigate(['/detail', this.selectedHero.id]);
   }
